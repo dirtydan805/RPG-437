@@ -34,3 +34,8 @@ Gabriel was here
 woot words .-.
 
 Now I want to die
+
+VERSION CONTROLL:
+Made changes to following files:
+Daniel - ASSETS Changed scripting.
+Gabriel - Changed model overlay.
