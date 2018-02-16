@@ -14,7 +14,7 @@ public class playerControl : MonoBehaviour {
 	private float gravity = 20.0f;
 	private float jumpSpeed = 10.0f;
 	private bool onGround = false;
-
+	bool hasSecondJump = false;
 
 	// Use this for initialization
 	void Start () {
@@ -31,15 +31,24 @@ public class playerControl : MonoBehaviour {
 			(transform.right * Input.GetAxis("Horizontal"))*speed);
 		direction.x = moveInput.x;
 		direction.z = moveInput.z;
+
 		if (controller.isGrounded) {
 			if (Input.GetKey ("space")) {
 				direction.y = jumpSpeed;
+				hasSecondJump = true;
+
 			} else {
 				direction.y = 0;
 			}
 
 		} else {
+			if(hasSecondJump && Input.GetKeyDown(KeyCode.Space)){
+				jumpSpeed = 20f;
+				hasSecondJump = true;
+
+			}
 			direction.y -= gravity * Time.deltaTime;
+
 		}
 		controller.Move (direction * Time.deltaTime);
 		direction.y -= gravity * Time.deltaTime;
