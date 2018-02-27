@@ -10,6 +10,7 @@ public class chase : MonoBehaviour {
 
 	public AudioSource attackSound;
 	public AudioSource notIdle;
+	public AudioSource moveSound;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,7 @@ public class chase : MonoBehaviour {
 
 		if (Vector3.Distance (player.position, this.transform.position) < 15 && (angle < 30 || pursuing)) 
 		{
-			notIdle.Play();
+			//notIdle.Play();
 			pursuing = true;
 			this.transform.rotation = Quaternion.Slerp (this.transform.rotation, Quaternion.LookRotation (direction), 0.1f);
 
@@ -34,7 +35,9 @@ public class chase : MonoBehaviour {
 			if (direction.magnitude > 5) 
 			{
 				this.transform.Translate (0, 0, 0.05f);
+				notIdle.Play();
 				anim.SetBool ("isWalking", true);
+				moveSound.Play ();
 				anim.SetBool ("isAttacking", false);
 			} 
 			else {
