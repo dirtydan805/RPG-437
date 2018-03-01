@@ -5,12 +5,19 @@ using UnityEngine;
 public class chase : MonoBehaviour {
 	public Transform player;
 	public Transform head;
-	static Animator anim;
+	Animator anim;
 	bool pursuing = false;
 
 	public AudioSource attackSound;
 	public AudioSource notIdle;
 	public AudioSource moveSound;
+	//ok 
+	string state = "patrol";
+	public GameObject[] waypoint;
+	int currentWP = 0;
+	float rotSpeed = 0.2f;
+	float speed = 1.5f;
+	float accuracyWP = 5.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,17 +31,34 @@ public class chase : MonoBehaviour {
 
 		float angle = Vector3.Angle (direction, head.up);
 
-		if (Vector3.Distance (player.position, this.transform.position) < 15 && (angle < 30 || pursuing)) 
+		if (state == "patrol" && waypoint.Length > 0) {
+			anim.SetBool ("isIdle", false);
+			anim.SetBool ("isWalking", true);
+			if (Vector3.Distance (waypoint [currentWP].transform.position, transform.position) < accuracyWP) {
+				currentWP++;
+				if (currentWP >= waypoint.Length) {
+					currentWP = 0;
+				}
+			}
+		
+			//rotate towards waypoint
+
+			direction = waypoint [currentWP].transform.position - transform.position;
+			this.transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (direction), rotSpeed * Time.deltaTime);
+			this.transform.Translate (0, 0, Time.deltaTime * speed);
+		}
+
+		if (Vector3.Distance (player.position, this.transform.position) < 15 && (angle < 30 || state == "pursuing")) 
 		{
 			//notIdle.Play();
-			pursuing = true;
-			this.transform.rotation = Quaternion.Slerp (this.transform.rotation, Quaternion.LookRotation (direction), 0.1f);
+			state = "pursuing";
+			this.transform.rotation = Quaternion.Slerp (this.transform.rotation, Quaternion.LookRotation (direction),rotSpeed * Time.deltaTime);
 
-			anim.SetBool ("isIdle", false);
+			//anim.SetBool ("isIdle", false);
 		
 			if (direction.magnitude > 5) 
 			{
-				this.transform.Translate (0, 0, 0.05f);
+				this.transform.Translate (0, 0, Time.deltaTime * speed);
 				notIdle.Play();
 				anim.SetBool ("isWalking", true);
 				moveSound.Play ();
@@ -46,10 +70,10 @@ public class chase : MonoBehaviour {
 				attackSound.Play();
 			}
 		} else {
-			anim.SetBool ("isIdle", true);
-			anim.SetBool ("isWalking", false);
+			//anim.SetBool ("isIdle", true);
+			anim.SetBool ("isWalking", true);
 			anim.SetBool ("isAttacking", false);
-			pursuing = false;
+			state = "patrol";
 		}
 	}
 }
