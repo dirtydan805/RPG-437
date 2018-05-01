@@ -28,6 +28,12 @@ WELCOME TO OUR PROJECT
 ██▓▓▓▓████──────────────██████ 
 ──████
 
+Changelog:
+4/30/18 
+Daniel: Added reloading, muzzle flash and smoke when firing
+and current ammo / max ammo to user interface. Fixed Weapon scripting(sounds), 
+ray cast shooting updated.
+
 
 Gabriel was here
 
