@@ -35,11 +35,8 @@ and current ammo / max ammo to user interface. Fixed Weapon scripting(sounds),
 ray cast shooting fixed and updated.
 
 
-5/1-Emily- the assets for the enemy are in the file labled enemy because 
-somebody else is working on the project atm i think.
-I will add the ships but not push that until i get 
-the go ahead that nobody is working on the project.
-I dont want anything bad to happen.
+5/2-(emily)there i uploaded one for this date what work i have done is in it including ships.
+fixed animations for the eneney and its basic scripting.
 
 
 Gabriel was here
