@@ -87,10 +87,10 @@ public class playerShoot : MonoBehaviour {
 			StartCoroutine (Reload ());
 			return;
 			}
-		if(Input.GetButtonUp("Reload")){
-			StartCoroutine (Reload ());
-			return;
-		}
+//		if(Input.GetButtonUp("Reload")){
+//			StartCoroutine (Reload ());
+//			return;
+//		}
 	}
 		
 	IEnumerator Reload(){
