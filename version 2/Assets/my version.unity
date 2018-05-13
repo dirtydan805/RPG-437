@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 10
   m_LinearFogEnd: 750
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ad8dc697f80c6f84abb3e88dcdd5e6b5, type: 2}
   m_HaloStrength: 0.401
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.562275, g: 0.53292215, b: 0.49587888, a: 1}
+  m_IndirectSpecularColor: {r: 0.56227154, g: 0.5328908, b: 0.49588585, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -649,8 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444f398f8049c408ebb30795be0c525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  stoppingDistance: 1
+  player: {fileID: 0}
 --- !u!1 &158027582 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1924217154915476, guid: aff47d0fca1e53244a323dbd82ddc90a,
@@ -1354,6 +1353,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
   m_IsPrefabParent: 0
@@ -1786,6 +1789,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
   m_IsPrefabParent: 0
@@ -1819,7 +1826,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &454336817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1832,20 +1839,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 7, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &454336818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454336812}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8176b59259657a40a2074ac354d8d85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1049441531}
-  attackSound: {fileID: 454336820}
-  moveSound: {fileID: 454336820}
 --- !u!114 &454336819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,8 +1944,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444f398f8049c408ebb30795be0c525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  stoppingDistance: 2
+  player: {fileID: 1049441531}
+--- !u!95 &454336822
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454336812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e9d80ff262fbc75448d4c9dc6acc4524, type: 3}
+  m_Controller: {fileID: 9100000, guid: d763c3c1801c54bc89cf1e97e289d789, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &454336823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454336812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1f097a6b0889545b6869d561c7b3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1049441531}
 --- !u!1001 &491454419
 Prefab:
   m_ObjectHideFlags: 0
@@ -2007,6 +2028,10 @@ Prefab:
     - target: {fileID: 400120, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
@@ -4739,7 +4764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.98
+      value: 5.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4774,6 +4799,10 @@ Prefab:
       propertyPath: shotText
       value: 
       objectReference: {fileID: 1922781949}
+    - target: {fileID: 1034788777050176, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -5281,8 +5310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444f398f8049c408ebb30795be0c525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  stoppingDistance: 1
+  player: {fileID: 0}
 --- !u!1001 &1697722110
 Prefab:
   m_ObjectHideFlags: 0
@@ -5483,8 +5511,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444f398f8049c408ebb30795be0c525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  stoppingDistance: 1
+  player: {fileID: 1049441531}
+--- !u!114 &1725708218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725708210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1f097a6b0889545b6869d561c7b3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1049441531}
 --- !u!1 &1738219235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6434,8 +6473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444f398f8049c408ebb30795be0c525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  stoppingDistance: 2
+  player: {fileID: 1049441531}
 --- !u!1 &2071734799
 GameObject:
   m_ObjectHideFlags: 0
