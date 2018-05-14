@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5623202, g: 0.53287727, b: 0.49586946, a: 1}
+  m_IndirectSpecularColor: {r: 0.56227154, g: 0.5328908, b: 0.49588585, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -14957,7 +14957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &851087757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14986,7 +14986,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851087756}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 341.07, y: 3.46, z: 160.31}
+  m_LocalPosition: {x: 435.06, y: 3.46, z: 292.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16293,12 +16293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2795b0d4edb19d042ba9d9015f1f1b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 50
   currentHealth: 0
   healthSlider: {fileID: 1703816580}
   damageImage: {fileID: 2145879494}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  sceneAfterDeath: 0
 --- !u!1 &1017315416
 GameObject:
   m_ObjectHideFlags: 0
@@ -31354,7 +31355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404524, guid: 415c1049b61b2a5479b871c6ddd4b2fd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.712724
+      value: 6.31
       objectReference: {fileID: 0}
     - target: {fileID: 404524, guid: 415c1049b61b2a5479b871c6ddd4b2fd, type: 2}
       propertyPath: m_LocalPosition.z

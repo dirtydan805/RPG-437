@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class PlayerHealth : MonoBehaviour
 	public float flashSpeed = 5f;                              
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     
 	bool isDead;                                                
-	bool damaged;                                               
+	bool damaged;   
+	public int sceneAfterDeath;
 
 	void Awake ()
 	{
@@ -63,9 +65,10 @@ public class PlayerHealth : MonoBehaviour
 
 	void Death ()
 	{
-		isDead = true;
+		//isDead = true;
 		//playerAudio.clip = deathClip;
 		//playerAudio.Play ();
+		SceneManager.LoadScene(sceneAfterDeath);
 
 	}       
 }
