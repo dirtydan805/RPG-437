@@ -26,7 +26,7 @@ public class enemychase : MonoBehaviour {
 				Quaternion.LookRotation(direction), 0.1f);
 
 			anim.SetBool("isIdle",false);
-			if(direction.magnitude >1.5)
+			if(direction.magnitude >2)
 			{
 
 				this.transform.Translate(0,0,0.2f);
@@ -35,7 +35,7 @@ public class enemychase : MonoBehaviour {
 			}
 			else
 			{
-				if (direction.magnitude > 1) {
+				if (direction.magnitude > 1.5) {
 					anim.SetBool ("isAttacking", true);
 					anim.SetBool ("isRunning", false);
 				}

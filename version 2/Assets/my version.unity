@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.562275, g: 0.53292215, b: 0.49587888, a: 1}
+  m_IndirectSpecularColor: {r: 0.5623202, g: 0.53287727, b: 0.49586946, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5081,6 +5081,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114745672052966194, guid: 9383514ac79211043bf6376e9722681c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9383514ac79211043bf6376e9722681c, type: 2}
   m_IsPrefabParent: 0
@@ -9686,6 +9691,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400122, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
   m_IsPrefabParent: 0
@@ -13097,7 +13106,7 @@ GameObject:
   - component: {fileID: 517356178}
   - component: {fileID: 517356177}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: inviswall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13110,7 +13119,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517356175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 251, y: 246.5, z: 493.5}
+  m_LocalPosition: {x: 251, y: 246.5, z: 478.6}
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children: []
   m_Father: {fileID: 1865279818}
@@ -14737,7 +14746,7 @@ GameObject:
   - component: {fileID: 825559427}
   - component: {fileID: 825559426}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: inviswall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14750,7 +14759,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825559424}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.4, y: 246.5, z: 250.4}
+  m_LocalPosition: {x: 42.5, y: 246.5, z: 250.4}
   m_LocalScale: {x: 500.00037, y: 500, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1865279818}
@@ -15587,13 +15596,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 975877633}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.40397894, y: -0.2661886, z: 0.12412577, w: 0.8663357}
+  m_LocalPosition: {x: 427.2, y: 420.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1865279818}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -34.16, z: 0}
 --- !u!1 &981468488
 GameObject:
   m_ObjectHideFlags: 0
@@ -30770,7 +30779,7 @@ GameObject:
   - component: {fileID: 1829101388}
   - component: {fileID: 1829101387}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: inviswall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30783,7 +30792,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1829101385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 249.8, y: 248.9, z: 4.5}
+  m_LocalPosition: {x: 249.8, y: 248.9, z: 21.3}
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children: []
   m_Father: {fileID: 1865279818}
@@ -31151,7 +31160,7 @@ GameObject:
   - component: {fileID: 1911254894}
   - component: {fileID: 1911254893}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: inviswall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31164,7 +31173,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1911254891}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 499.2, y: 246.5, z: 250.4}
+  m_LocalPosition: {x: 467.2, y: 246.5, z: 250.4}
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children: []
   m_Father: {fileID: 1865279818}
