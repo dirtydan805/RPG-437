@@ -16,6 +16,11 @@ public class PlayerHealth : MonoBehaviour
 	bool damaged;   
 	public int sceneAfterDeath;
 
+
+	float healthTimer = 0.0f;
+	bool healthShouldRespawn = false;
+	public GameObject healthBottle;
+
 	void Awake ()
 	{
 
@@ -41,6 +46,17 @@ public class PlayerHealth : MonoBehaviour
 		}
 			
 		damaged = false;
+
+
+		if (healthShouldRespawn) 
+		{
+			healthTimer += Time.deltaTime;
+			if (healthTimer > 5.0f) 
+			{
+				healthBottle.gameObject.SetActive (true);
+				healthTimer = 0.0f;
+			}
+		}
 	}
 
 
@@ -70,5 +86,18 @@ public class PlayerHealth : MonoBehaviour
 		//playerAudio.Play ();
 		SceneManager.LoadScene(sceneAfterDeath);
 
-	}       
+	} 
+
+	void OnTriggerEnter(Collider item)
+	{
+		if (item.gameObject.tag == "PlayerHealthBottle") 
+		{
+			if (currentHealth < 100) 
+			{
+				currentHealth = currentHealth + 20;
+				item.gameObject.SetActive (false);
+				healthShouldRespawn = true;
+			}
+		}
+	}
 }
