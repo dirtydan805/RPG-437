@@ -21,6 +21,7 @@ public class playerShoot : MonoBehaviour {
 	private bool isReloading = false;
 
 	public AudioSource shootSound;
+	public AudioSource reloadSound;
 	private WaitForSeconds shotDuration = new WaitForSeconds(.07f);
 	private LineRenderer laserLine;
 	private float nextFire;
@@ -93,7 +94,7 @@ public class playerShoot : MonoBehaviour {
 			StartCoroutine (Reload ());
 			return;
 			}
-		if(Input.GetButtonUp("Fire2")){
+		if(Input.GetButtonUp("Fire2") && currentAmmo <30){
 			StartCoroutine (Reload ());
 			return;
 		}
@@ -101,6 +102,7 @@ public class playerShoot : MonoBehaviour {
 		
 	IEnumerator Reload(){
 		isReloading = true;
+		reloadSound.Play();
 		Debug.Log("Reloading...");
 		animator.SetBool ("Reloading", true);
 		yield return new WaitForSeconds (reloadTime - .25f);
