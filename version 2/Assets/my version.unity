@@ -5079,7 +5079,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1190429519239638, guid: 9383514ac79211043bf6376e9722681c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114745672052966194, guid: 9383514ac79211043bf6376e9722681c,
         type: 2}
@@ -5899,6 +5899,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: dd6550ece43af764e8e9a802baa977e6, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9626,7 +9630,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 454336812}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e1f097a6b0889545b6869d561c7b3f9, type: 3}
   m_Name: 
@@ -14975,8 +14979,8 @@ MonoBehaviour:
   - {fileID: 1725708210}
   spawnValues: {x: 10, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 20
-  spawnLeastWait: 10
+  spawnMostWait: 5
+  spawnLeastWait: 5
   startWait: 1
   stop: 0
 --- !u!4 &851087758
@@ -16293,8 +16297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2795b0d4edb19d042ba9d9015f1f1b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 50
-  currentHealth: 0
+  startingHealth: 100
+  currentHealth: 100
   healthSlider: {fileID: 1703816580}
   damageImage: {fileID: 2145879494}
   flashSpeed: 5
@@ -26293,7 +26297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1683731795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31355,7 +31359,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404524, guid: 415c1049b61b2a5479b871c6ddd4b2fd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.31
+      value: 4.96
       objectReference: {fileID: 0}
     - target: {fileID: 404524, guid: 415c1049b61b2a5479b871c6ddd4b2fd, type: 2}
       propertyPath: m_LocalPosition.z
