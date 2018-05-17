@@ -7,6 +7,7 @@ public class EnemyFollow : MonoBehaviour {
 
 	//public float speed;
 	//public float stoppingDistance;
+	public AudioSource attackSound;
 	public float timeBetweenAttacks = 3f;     
 	public int attackDamage = 3;               
 	//GameObject player;                         
@@ -65,7 +66,7 @@ public class EnemyFollow : MonoBehaviour {
 	void Attack ()
 	{
 		timer = 0f;
-
+		attackSound.Play();
 		if(playerHealth.currentHealth > 0)
 		{
 			playerHealth.TakeDamage (attackDamage);
