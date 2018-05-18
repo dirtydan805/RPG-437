@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.562275, g: 0.53292215, b: 0.49587888, a: 1}
+  m_IndirectSpecularColor: {r: 0.56227154, g: 0.5328908, b: 0.49588585, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 275391628}
   m_Layer: 0
   m_Name: PlayerHealthBottle
-  m_TagString: Untagged
+  m_TagString: PlayerHealthBottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,7 +1039,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
@@ -1069,7 +1069,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275391622}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -1088,12 +1088,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275391622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 372.7, y: 5.21, z: 120.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &275391628
 BoxCollider:
@@ -1994,7 +1994,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &454336817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3331,7 +3331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &851087757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3349,8 +3349,8 @@ MonoBehaviour:
   - {fileID: 1725708210}
   spawnValues: {x: 10, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 5
-  spawnLeastWait: 5
+  spawnMostWait: 30
+  spawnLeastWait: 15
   startWait: 1
   stop: 0
 --- !u!4 &851087758
@@ -4985,12 +4985,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 454336812}
-  - {fileID: 454336812}
-  - {fileID: 454336812}
+  - {fileID: 2033126911}
+  - {fileID: 1725708210}
   spawnValues: {x: 10, y: 0, z: 2}
   spawnWait: 0
-  spawnMostWait: 30
-  spawnLeastWait: 15
+  spawnMostWait: 45
+  spawnLeastWait: 30
   startWait: 1
   stop: 0
 --- !u!4 &1407020496
@@ -5000,11 +5000,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407020494}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 369.5, y: 5.57, z: 450.7}
+  m_LocalPosition: {x: 288.31, y: 3.63, z: 444.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &1417107454
 Prefab:
