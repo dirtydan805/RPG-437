@@ -94,7 +94,7 @@ public class PlayerHealth : MonoBehaviour
 		{
 			if (currentHealth < 100) 
 			{
-				currentHealth = currentHealth + 20;
+				currentHealth = currentHealth + 40;
 				item.gameObject.SetActive (false);
 				healthShouldRespawn = true;
 			}
